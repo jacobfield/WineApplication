@@ -8,7 +8,7 @@ async function resetDatabase() {
     await pool.query(`
         DROP TABLE IF EXISTS wines;
         DROP TABLE IF EXISTS descriptions;`);
-
+    tjtyjyttj;
     // Create new tables wines and descriptions
     //Create wines
     await pool.query(`
