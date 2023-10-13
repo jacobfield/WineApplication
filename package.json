@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "vitest",
-    "dev": "nodemon -r dotenv/config server.js"
+    "dev": "nodemon -r dotenv/config server.js",
+    "reset": "/scripts/reset-dbs.js"
   },
   "keywords": [],
   "author": "",
