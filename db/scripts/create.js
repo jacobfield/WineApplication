@@ -1,11 +1,13 @@
-// import { Pool } from "pg";
-import { pool } from "../index.js";
-
 // import create tables function
-import { createTables } from "./reset";
+import { createTables } from "./reset.js";
 
 // call create tables function
-await createTables();
-
-// message to show function successfully performed
-console.log("Tables created successfully");
+createTables()
+  .then(() => {
+    // Message to show function successfully performed
+    console.log("Tables created successfully");
+  })
+  .catch((error) => {
+    // Handle any errors that occurred during the deletion process
+    console.error("Error creating tables:", error);
+  });

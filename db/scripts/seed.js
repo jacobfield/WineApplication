@@ -2,7 +2,7 @@
 import { pool } from "../index.js";
 
 // import seed data function
-import { seedTables } from "./reset";
+import { seedTables } from "./reset.js";
 
 // call seed data function
 await seedTables();
