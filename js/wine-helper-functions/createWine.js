@@ -4,7 +4,6 @@ import { pool } from "../../db/index.js";
 // Create wine
 export async function createWine(wine) {
   try {
-    // Query DB to create a wine and return it
     // Define SQL query to INSERT INTO wines table
     const insertWine =
       "INSERT INTO wines (wine_name, colour, grape_type, year) VALUES ($1, $2, $3, $4) RETURNING *";

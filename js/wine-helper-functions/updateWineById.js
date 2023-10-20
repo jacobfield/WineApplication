@@ -7,7 +7,7 @@ export async function updateWineById(id, updates) {
     // query DB for wine by ID, update it, return it
     // update wine, set wine_name, colour, grape_type, year
     const updateWine =
-      "Update wines SET wine_name = $1, colour = $2, grape_type = $3, year = $4 WHERE id = $5 RETURNING *";
+      "UPDATE wines SET wine_name = $1, colour = $2, grape_type = $3, year = $4 WHERE id = $5 RETURNING *";
     // Use pool object to send query to database, preventing SQL injection
     const result = await pool.query(updateWine, [
       updates.wine_name,
