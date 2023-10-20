@@ -7,10 +7,10 @@
   "scripts": {
     "test": "vitest",
     "dev": "nodemon -r dotenv/config server.js",
-    "reset": "node -r dotenv/config db/scripts/reset.js",
-    "delete": "node -r dotenv/config db/scripts/delete.js",
-    "create": "node -r dotenv/config db/scripts/create.js",
-    "seed": "node -r dotenv/config db/scripts/seed.js"
+    "reset": "node -r dotenv/config db/scripts/resetTables.js",
+    "delete": "node -r dotenv/config db/scripts/dropTables.js",
+    "create": "node -r dotenv/config db/scripts/createTables.js",
+    "seed": "node -r dotenv/config db/scripts/seedTables.js"
   },
   "keywords": [],
   "author": "",
