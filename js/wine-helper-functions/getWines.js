@@ -10,7 +10,8 @@ export async function getWines() {
     // Pool object to send the query to the database
     const result = await pool.query(queryWines);
 
-    // 'Rows' property will contain the result of the retreived wines records
+    // 'Rows' property will contain the result of the retrieved wines records
+    console.log("getWines.js function works");
     return result.rows;
     // catch any errors
   } catch (error) {
