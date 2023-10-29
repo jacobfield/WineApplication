@@ -2,7 +2,7 @@
 import { wineHelperFunctions } from "../path/to/wine-helper-functions";
 
 // Create a function to get wine by ID
-export async function wineById(req, res) {
+export async function getWineByIdController(req, res) {
   try {
     // Declare variable with the required ID x
     const wine = req.params.id;

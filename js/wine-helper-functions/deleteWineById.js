@@ -5,7 +5,7 @@ import { pool } from "../../db/index.js";
 export async function deleteWineById(id) {
   try {
     // Query the DB to delete a wine and by it's id
-    const deleteWine = "DELETE FROM films WHERE id = $1 RETURNING *";
+    const deleteWine = "DELETE FROM wines WHERE id = $1 RETURNING *";
 
     // Pool object to send the query to database, passing the wine id as parameter
     const result = await pool.query(deleteWine, [id]);

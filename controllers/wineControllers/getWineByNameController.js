@@ -2,7 +2,7 @@
 import { wineHelperFunctions } from "../path/to/wine-helper-functions";
 
 // Create function to get wine by colour
-export async function wineByName(req, res) {
+export async function getWineByNameController(req, res) {
   try {
     // Declare variable with the required name x
     const wine = req.params.name;
