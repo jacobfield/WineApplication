@@ -1,7 +1,7 @@
 // Import the required modules
 import express from "express";
 import morgan from "morgan";
-import { wineRoutes } from "./route-handlers/wineHandlers.js";
+import { wineRoutes } from "./routes/wineRoutes.js";
 // Initialize the express app
 const app = express();
 // Retrieve the port number from environment variables

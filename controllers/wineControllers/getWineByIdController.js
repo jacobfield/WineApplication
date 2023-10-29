@@ -1,5 +1,5 @@
 // Import the necessary helper functions
-import { wineHelperFunctions } from "../path/to/wine-helper-functions";
+import { wineHelperFunctions } from "../../js/wine-helper-functions/wines.js";
 
 // Create a function to get wine by ID
 export async function getWineByIdController(req, res) {

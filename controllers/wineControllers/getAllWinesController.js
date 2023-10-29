@@ -1,7 +1,7 @@
 // Import the necessary helper functions
-import { wineHelperFunctions } from "../path/to/wine-helper-functions";
+import { wineHelperFunctions } from "../../js/wine-helper-functions/wines.js";
 
-export async function getWinesController(req, res) {
+export async function getAllWinesController(req, res) {
   try {
     // Declare a variable and await the helper function to get all wines
     const allWines = await wineHelperFunctions.getWines();

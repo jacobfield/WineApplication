@@ -1,7 +1,7 @@
 // Import the necessary helper functions
-import { wineHelperFunctions } from "../path/to/wine-helper-functions";
+import { wineHelperFunctions } from "../../js/wine-helper-functions/wines.js";
 
-export async function updateWineByIDController(req, res) {
+export async function updateWineByIdController(req, res) {
   try {
     const id = req.params.id;
     const data = req.body;
@@ -12,12 +12,10 @@ export async function updateWineByIDController(req, res) {
       "Error updating wine: error originated in updateWineByIdController.js",
       error
     );
-    res
-      .status(500)
-      .json({
-        status: "Error",
-        message:
-          "Error updating wine: error originated in updateWineByIdController.js",
-      });
+    res.status(500).json({
+      status: "Error",
+      message:
+        "Error updating wine: error originated in updateWineByIdController.js",
+    });
   }
 }

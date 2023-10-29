@@ -1,7 +1,7 @@
 // Import the necessary helper functions
-import { wineHelperFunctions } from "../path/to/wine-helper-functions";
+import { wineHelperFunctions } from "../../js/wine-helper-functions/wines.js";
 
-export async function deleteWineByIdController(req, res) {
+export async function deleteWineController(req, res) {
   try {
     const id = req.params.id;
     const wine = await wineHelperFunctions.deleteWine(id);

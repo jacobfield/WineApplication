@@ -11,5 +11,9 @@ import { deleteWineController } from "../controllers/wineControllers/deleteWineC
 export const wineRoutes = express.Router();
 
 wineRoutes.get("/", getAllWinesController);
-wineRoutes / get("/:id", getWineByIdController);
-wineRoutes / get("/:wine_name", getWineByNameController);
+wineRoutes.get("/:id", getWineByIdController);
+wineRoutes.get("/:wine_name", getWineByNameController);
+wineRoutes.get("/:wine_colour", getWineByColourController);
+wineRoutes.post("/", createWineController);
+wineRoutes.patch("/:id", updateWineByIdController);
+wineRoutes.delete("/:id", deleteWineController);
