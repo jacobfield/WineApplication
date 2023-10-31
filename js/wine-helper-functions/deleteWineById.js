@@ -10,8 +10,9 @@ export async function deleteWineById(id) {
     // Pool object to send the query to database, passing the wine id as parameter
     const result = await pool.query(deleteWine, [id]);
     //  return result
-    return result;
+    return result.rows;
   } catch (error) {
     console.error("Error deleting wine:", error);
+    throw error;
   }
 }

@@ -4,7 +4,8 @@ import { wineHelperFunctions } from "../../js/wine-helper-functions/wines.js";
 export async function deleteWineController(req, res) {
   try {
     const id = req.params.id;
-    const wine = await wineHelperFunctions.deleteWine(id);
+    const wine = await wineHelperFunctions.deleteWineById(id);
+    res.status(200).json({ status: "success", data: wine });
   } catch (error) {
     console.error(
       `Error deleting wine. Error Originated in deleteWineController.js`,
