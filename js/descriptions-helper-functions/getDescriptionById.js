@@ -2,7 +2,7 @@
 import { pool } from "../../db/index.js";
 
 // get specific description by id
-export async function getDescriptionById() {
+export async function getDescriptionById(description_id) {
   try {
     const queryDescrip = "SELECT * FROM descriptions WHERE description_id = $1";
     // use pool to query db

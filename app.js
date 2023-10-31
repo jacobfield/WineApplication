@@ -2,6 +2,7 @@
 import express from "express";
 import morgan from "morgan";
 import { wineRoutes } from "./routes/wineRoutes.js";
+import { descriptionRoutes } from "./routes/descriptionsRoutes.js";
 // Initialize the express app
 const app = express();
 // Retrieve the port number from environment variables
@@ -14,5 +15,5 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.use("/wines", wineRoutes);
-
+app.use("/descriptions", descriptionRoutes);
 export default app;
