@@ -6,9 +6,9 @@ export async function deleteDescriptionById(description_id) {
   try {
     // query db for a description to delete by it's id
     const deleteDescription =
-      "DELETE FROM descriptions WHERE description_id = $1 RETURNING *1";
+      "DELETE FROM descriptions WHERE description_id = $1 RETURNING *";
     // pool object to send the query to database passing id as param
-    const result = await pool.quert(deleteDescription, [description_id]);
+    const result = await pool.query(deleteDescription, [description_id]);
     return result;
   } catch (error) {
     console.error("Error deleting that description:", error);

@@ -11,7 +11,9 @@ export async function getDescriptionByIdController(req, res) {
     );
     console.log(description);
 
-    res.status(200).json({ status: "success", data: descriptionById });
+    res
+      .status(200)
+      .json({ status: "Success searching by ID", data: descriptionById });
   } catch (error) {
     console.error(`Error retrieving description:`, error);
     res.status(500).json({
