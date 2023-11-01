@@ -5,7 +5,8 @@ import { pool } from "../../db/index.js";
 export async function getWineByColour() {
   // Query db to return wine with matching ID or null
   try {
-    const queryWine = "SELECT * FROM wines WHERE colour = $1";
+    const queryWine =
+      "SELECT * FROM wines JOIN descriptions ON wines.id = descriptions.wine_id WHERE wines.colour = $1;";
     // defind SQL query to fetch wine by colour
     const result = await pool.query(queryFilm, [colour]);
     // rows should contain queried wine data

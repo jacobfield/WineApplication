@@ -6,7 +6,8 @@ export async function getWineById(id) {
   // Query the database to return the wine with a matching id
   try {
     // define SQL uery to fetch wine by id
-    const queryWine = "SELECT * FROM wines WHERE id = $1";
+    const queryWine =
+      "SELECT * FROM wines JOIN descriptions ON wines.id = descriptions.wine_id WHERE wines.id = $1;";
     // use pool object to send query to database, preventing SQL injection
     const result = await pool.query(queryWine, [id]);
 

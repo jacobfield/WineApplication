@@ -5,7 +5,8 @@ import { pool } from "../../db/index.js";
 export async function getWines() {
   // Query db and return all wines
   try {
-    const queryWines = "SELECT * FROM wines";
+    const queryWines =
+      "SELECT * FROM wines LEFT JOIN descriptions ON wines.ID = descriptions.wine_id";
 
     // Pool object to send the query to the database
     const result = await pool.query(queryWines);
